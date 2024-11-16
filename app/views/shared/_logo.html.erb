@@ -1,4 +1,4 @@
-<%= link_to root_path, class: "site-logo", aria: { label: "#{t('views.main.aria_home', community: nil)}"} do %>
-  <%= image_tag "logo-darkmode", alt: "Dark Mode Secret Gardens Logo", class: "dark:flex hidden h-20 w-full" %>
-  <%= image_tag "logo-lightmode", alt: "Light Mode Secret Gardens Logo", class: "flex dark:hidden h-20 w-full" %>
+<%= link_to root_path, class: "flex items-center gap-3", id: "logo", aria: { label: "#{t('views.main.aria_home', community: nil)}"} do %>
+  <%= image_tag "logo-darkmode", alt: "Dark Mode Lyveris Logo", class: "w-full h-12 ml-1 max-xl:hidden max-md:block dark:!hidden" %>
+  <%= image_tag "logo-lightmode", alt: "Light Mode Lyveris Logo", class: "w-full h-12 ml-1 !hidden max-xl:!hidden max-md:block dark:max-md:!block dark:!block" %>
 <% end %>
