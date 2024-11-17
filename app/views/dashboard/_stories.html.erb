@@ -3,34 +3,15 @@
   <div id="stories-carousel" class="relative w-full" data-carousel="slide" tabindex="-1">
     <!-- Stories carousel wrapper -->
     <ul class="relative h-12 overflow-hidden rounded-lg md:h-20 w-[calc(100%+14px)]">
-      <li class="md:pr-2.5 pr-2 hover:scale-[1.15] hover:-rotate-2 duration-300">
-        <%= link_to image_tag('avatars/avatar-lg-1.jpg', class: 'w-full h-full rounded-lg object-cover'), class: 'block w-full h-full' do %>
-          <div class="md:w-20 md:h-20 w-12 h-12 relative md:border-4 border-2 shadow border-white rounded-full overflow-hidden dark:border-slate-700">
-            <%= image_tag "avatars/avatar-2.jpg", class: "absolute w-full h-full object-cover" %>
-          </div>
-        <% end %>
+      <li class="md:pr-3">
+        <div class="md:w-20 md:h-20 w-12 h-12 rounded-full relative border-2 border-dashed grid place-items-center bg-slate-200 border-slate-300 dark:border-slate-700 dark:bg-dark2">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M7.5 4.586A2 2 0 0 1 8.914 4h6.172a2 2 0 0 1 1.414.586L17.914 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1.086L7.5 4.586ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" clip-rule="evenodd"/>
+          </svg>
+        </div>
       </li>
+      <% story = Hash.new(title: 'Story 1', image: 'https://via.placeholder.com/150', url: '#') %>
+      <%= render partial: 'dashboard/story', locals: { story: story } %>
     </ul>
-  <div class="relative" tabindex="-1" uk-slider="autoplay: true;finite: true" uk-lightbox="">
-    <div class="py-5 uk-slider-container">
-      <ul class="uk-slider-items w-[calc(100%+14px)]" uk-scrollspy="target: > li; cls: uk-animation-scale-up; delay: 20;repeat:true">
-        <li class="md:pr-3" uk-scrollspy-class="uk-animation-fade">
-          <div class="md:w-20 md:h-20 w-12 h-12 rounded-full relative border-2 border-dashed grid place-items-center bg-slate-200 border-slate-300 dark:border-slate-700 dark:bg-dark2">
-            <ion-icon name="camera" class="text-2xl"></ion-icon>
-          </div>
-        </li>
-        <li class="md:pr-2.5 pr-2 hover:scale-[1.15] hover:-rotate-2 duration-300">
-          <%= render partial: "dashboard/story", locals: { story: Hash.new(id: 1)  } %>
-        </li>
-        <li class="md:pr-2.5 pr-2 hover:scale-[1.15] hover:-rotate-2 duration-300">
-        </li>
-        <li class="md:pr-2.5 pr-2 hover:scale-[1.15] hover:-rotate-2 duration-300">
-        </li>
-      </ul>
-    </div>
-    <div class="max-md:hidden">
-      <button type="button" class="absolute -translate-y-1/2 bg-white shadow rounded-full top-1/2 -left-3.5 grid w-8 h-8 place-items-center dark:bg-dark3" uk-slider-item="previous"> <ion-icon name="chevron-back" class="text-2xl"></ion-icon></button>
-      <button type="button" class="absolute -right-2 -translate-y-1/2 bg-white shadow rounded-full top-1/2 grid w-8 h-8 place-items-center dark:bg-dark3" uk-slider-item="next"> <ion-icon name="chevron-forward" class="text-2xl"></ion-icon> </button>
-    </div>
   </div>
 </div>

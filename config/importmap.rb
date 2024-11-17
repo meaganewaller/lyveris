@@ -1,3 +1,7 @@
+# Pin npm packages by running ./bin/importmap pin PACKAGE_NAME
+# Run ./bin/importmap update to update the pinned packages to the latest
+# Run ./bin/importmap help for more commands
+
 pin "application", preload: true
 pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
@@ -10,11 +14,5 @@ pin "actiontext", to: "actiontext.js"
 pin "trix", to: "trix.js"
 pin "@rails/activestorage", to: "activestorage.esm.js"
 pin "@rails/actiontext", to: "actiontext.esm.js"
-pin "@activeadmin/activeadmin", to: "https://ga.jspm.io/npm:@activeadmin/activeadmin@4.0.0-beta5/dist/active_admin.js"
-pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.8/lib/index.js"
-pin "@rails/ujs", to: "https://ga.jspm.io/npm:@rails/ujs@7.1.2/app/assets/javascripts/rails-ujs.esm.js"
-pin "uikit", preload: true # @3.21.13
-pin "uikit-icons", preload: true # @2.1.0
-pin "ionicons", preload: true # @7.4.0
-pin "trix" # @2.1.8
+pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
 pin "@rails/ujs", to: "@rails--ujs.js" # @7.1.3

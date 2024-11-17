@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <%= metamagic site: "#{I18n.t('title')}", title: [:site, :title], separator: " · " %>
-
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -445,21 +444,21 @@
         </p>
       </div>
     </div>
-    <!-- Smooth scroll nav links -->
-    <script type="text/javascript">
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      }
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-    </script>
-
   </body>
 </html>
+
+<!-- Smooth scroll nav links -->
+<script type="text/javascript">
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>

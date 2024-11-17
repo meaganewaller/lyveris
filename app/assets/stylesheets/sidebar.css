@@ -1,0 +1,76 @@
+#sidebar__inner nav > a {
+  @apply flex items-center gap-3 capitalize font-medium text-sm relative p-3 rounded-lg lg:justify-start justify-center duration-300 text-gray-800 dark:text-white/70;
+}
+
+#sidebar__inner nav > a svg {
+  @apply w-6 h-6 shrink-0 text-black dark:text-white;
+}
+
+#sidebar__inner nav .button {
+  @apply px-4 py-1.5 text-sm font-medium rounded-lg capitalize;
+}
+#sidebar__inner:has(nav a[aria-expanded="true"]) {
+  @apply md:w-[73px] px-3.5 duration-500;
+}
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav > a svg {
+  @apply -ml-0.5;
+}
+
+#sidebar__inner:has(nav a[aria-expanded="true"]) #logo #logo__text,
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a span,
+#sidebar__inner:has(nav a[aria-expanded="true"]) #profile-link span {
+  @apply md:!hidden;
+}
+
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a span,
+#sidebar__inner:has(nav a[aria-expanded="true"]) #logo #logo__icon {
+  @apply md:!block;
+}
+
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav > a[aria-expanded="true"] {
+  @apply ring-1 ring-slate-300 ring-inset dark:ring-slate-800 !bg-transparent hover:!bg-transparent;
+}
+
+#sidebar__inner nav a.active #icon__outline,
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a.active,
+#sidebar__inner:has(nav a[aria-expanded="true"])
+  nav
+  > a[aria-expanded="true"]
+  #icon__outline {
+  @apply !hidden;
+}
+
+#sidebar__inner nav a.active #icon__solid,
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a.active,
+#sidebar__inner:has(nav a[aria-expanded="true"])
+  nav
+  > a[aria-expanded="true"]
+  #icon__solid {
+  @apply !flex;
+}
+
+/* nav link color */
+#sidebar__inner nav > a {
+  @apply hover:text-black hover:dark:text-white hover:!bg-secondery dark:hover:!bg-slate-700;
+}
+#sidebar__inner nav a.active {
+  @apply text-black dark:text-white;
+}
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav > a {
+  @apply hover:!bg-secondery dark:hover:!bg-slate-700;
+}
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav > a[aria-expanded="true"] {
+  @apply bg-secondery dark:bg-dark3;
+}
+
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a span {
+  @apply scale-75 -left-40 bg-white absolute rounded-lg p-2.5 pr-3 drop-shadow z-[1000000] duration-200 transition-transform max-md:!opacity-0 dark:bg-dark3 dark:text-white
+  before:w-3 before:h-3 before:-left-1.5 before:rounded-sm before:absolute before:bg-white before:rotate-45 before:top-1/2 before:-translate-y-1/2 before:dark:bg-slate-700;
+}
+
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a:hover span {
+  @apply left-[68px] scale-100;
+}
+#sidebar__inner:has(nav a[aria-expanded="true"]) nav a.active {
+  @apply bg-transparent;
+}

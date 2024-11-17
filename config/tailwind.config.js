@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
   darkMode: "selector",
@@ -211,12 +212,6 @@ module.exports = {
           950: "#311d3f",
         },
       },
-      keyframes: {
-        flashfade: {
-          "0%, 100%": { opacity: "0" },
-          "5%, 80%": { opacity: "1" },
-        },
-      },
     },
   },
   plugins: [
@@ -224,5 +219,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/container-queries"),
+    // require("tailwindcss-debug-screens"),
+    require("flowbite/plugin"),
   ],
 };
