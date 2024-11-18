@@ -2,14 +2,13 @@ class BlogPostsController < ApplicationController
   include ApplicationHelper
   layout :determine_layout
 
-  before_action except: [:index, :new, :show] do
-    authenticate_user!
+  before_action except: [:index, :show] do
+    authenticate_user!(alert_message: 'You are not authorized')
   end
   before_action :set_blog_post, only: [:edit, :show, :update, :destroy]
-  # after_action :verify_authorized
-  # before_action only: [:new, :edit, :create, :update, :destroy] do
-  #   authenticate_admin!(alert_message: 'You are not authorized')
-  # end
+  before_action only: [:new, :edit, :create, :update, :destroy] do
+    authenticate_admin!(alert_message: 'You are not authorized')
+  end
 
   # GET /blog
   def index
@@ -29,7 +28,11 @@ class BlogPostsController < ApplicationController
 
   # GET /blog/new
   def new
-    @blog_post = BlogPost.new(user: current_user)
+    unless current_user
+      @blog_post = BlogPost.new(user: current_user)
+    else
+      redirect_to new_user_session_path, alert: 'You are not authorized'
+    end
   end
 
   # GET /blog/:slug/edit
@@ -58,8 +61,12 @@ class BlogPostsController < ApplicationController
 
   # DELETE /blog/:slug
   def destroy
-    @blog_post.destroy
-    redirect_to blog_posts_url, notice: "Blog post was successfully destroyed."
+    if @blog_post.user_id != current_user.id
+      redirect_to blog_posts_url, alert: "You are not authorized to delete this post."
+    else
+      @blog_post.destroy
+      redirect_to blog_posts_url, notice: "Blog post was successfully destroyed."
+    end
   end
 
   private

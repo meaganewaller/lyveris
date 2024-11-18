@@ -13,6 +13,6 @@ feature 'Login', js: true do
     user = create(:user, paying_customer: true)
     login(user)
     expect(page.text).to_not include('Start Trial')
-    expect(page.text).to include('Dashboard')
+    expect(page.text).to include('My Feed')
   end
 end
