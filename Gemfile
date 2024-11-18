@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.5'
 
-gem 'activeadmin', '4.0.0.beta12'
+gem 'activeadmin', '4.0.0.beta13'
 gem 'aws-sdk-s3', require: false
 # gem 'chartkick'
 gem 'delayed', github: 'ryanckulp/delayed' # delayed_job_active_record rails 7 fork: https://github.com/betterment/delayed
@@ -23,7 +23,7 @@ gem "packwerk", "~> 3.2"
 gem 'pretender'
 gem 'puma', '~> 6.4'
 gem 'rack-cors', :require => 'rack/cors'
-gem 'rails', '8.0.0.rc1'
+gem 'rails', '8.0.0'
 gem 'redis'
 gem 'rename', '1.1.3', git: 'https://github.com/ryanckulp/rename' # remove this gem after use
 gem "flowbite", "~> 2.3"
