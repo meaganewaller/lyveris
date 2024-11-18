@@ -1,0 +1,32 @@
+<header class="lg:py-4 lg:px-6 py-3 px-4 border-b border-slate-200/60 dark:border-slate-600/40 bg-white/95 backdrop-blur-xl z-40 max-w-7xl mx-auto dark:bg-slate-900/80" data-controller="header theme">
+  <nav class="flex items-center justify-between flex-wrap w-full mx-auto">
+    <div class="flex items-center flex-no-shrink text-white mr-6">
+      <%= link_to root_path, class: "flex items-center hover:opacity-80" do %>
+        <%= image_tag "logo-darkmode.svg", alt: "Dark mode Lyveris Logo", class: "dark:inline-flex hidden h-7" %>
+        <%= image_tag "logo-lightmode.svg", alt: "Light mode Lyveris Logo", class: "dark:hidden inline-flex h-7" %>
+      <% end %>
+    </div>
+    <div class="block sm:hidden">
+      <button type="button"
+              class="p-2.5 text-lg max-md:flex hidden group z"
+              data-action="click->header#toggleMobileNav">
+              <span class="sr-only">Open main menu</span>
+              <%= inline_svg_tag("icons/menu-dots.svg", class: nav_icon_classes) %>
+      </button>
+    </div>
+
+    <div id="main-nav"
+         class="w-full flex-grow sm:flex text-center sm:w-auto hidden"
+         data-header-target="mainNav">
+      <div class="text-sm sm:flex-grow">
+        <%= link_to "#{I18n.t('header.menu.blog')}", blog_posts_path, class: nav_link_classes('blog') %>
+        <%= link_to "#{I18n.t('header.menu.features')}", "#", class: nav_link_classes('features') %>
+        <%= link_to "#{I18n.t('header.menu.contact')}", "mailto:#{Rails.application.credentials.admin_email}", target: '_blank', class: nav_link_classes('contact')  %>
+        <%= link_to "#{I18n.t('header.menu.login')}", new_user_session_path, class: nav_link_classes('login') %>
+        <%= link_to "#{I18n.t('header.menu.signup')}", new_user_registration_path, class: 'ml-8 whitespace-nowrap text-base font-medium inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700' %>
+
+      </div>
+    </div>
+        <%= inline_svg_tag("icons/light-bulb.svg", class: nav_icon_classes, data: { action: "click->theme#toggle"}) %>
+  </nav>
+</header>

@@ -3,18 +3,17 @@
   description: "#{I18n.t('pages.home.meta.description')}"
 ) %>
 
-<div class="relative mt-10">
+<div class="max-w-5xl mx-auto space-y-32 max-md:p-8">
   <!-- Hero: Start -->
-  <section class="relative bg-primary-700">
-    <div class="absolute inset-0">
-      <div class="absolute inset-y-0 left-0 w-1/2 bg-primary-100"></div>
-    </div>
-
+  <section>
     <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-2">
       <div class="flex items-end px-4 pb-16 bg-primary-100 pt-28 sm:px-6 lg:px-8 lg:pb-24 xl:pr-12">
         <div class="max-w-lg mx-auto lg:mx-0">
-          <p class="text-5xl sm:text-6xl lg:text-7xl">🌼</p>
-          <h1 class="mt-10 text-3xl text-primary-900 sm:text-4xl lg:text-5xl font-sans">secret gardens in my mind.</h1>
+          <div>
+            <%= image_tag "mark-lightmode.svg", class: "max-md:w-8 md:w-12 mx-auto inline-flex dark:hidden" %>
+            <%= image_tag "mark-darkmode.svg", class: "max-md:w-8 md:w-12 mx-auto dark:inline-flex hidden" %>
+          </div>
+          <h1 class="mt-10 text-3xl text-primary-900 sm:text-4xl lg:text-5xl font-sans">lyveris</h1>
           <p class="mt-6 text-xl sm:text-2xl lg:text-3xl font-serif italic font-normal leading-7 text-primary-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.</p>
           <div class="relative inline-flex mt-10 group">
             <div class="absolute transition-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
@@ -41,10 +40,10 @@
 
                   <div class="flex-1 ml-4 lg:ml-6">
                     <p class="text-xs font-medium text-primary-900 lg:text-sm">
-                      <a href="#" title="" class=""> Growth </a>
+                    <a href="#" title="" class=""> Growth </a>
                     </p>
                     <p class="mt-2 text-sm font-bold text-primary-900 lg:text-lg group-hover:text-primary-600">
-                      <a href="#" title="" class=""> How a visual artist redefines success in graphic design </a>
+                    <a href="#" title="" class=""> How a visual artist redefines success in graphic design </a>
                     </p>
                     <p class="mt-2 text-xs font-medium text-primary-500 lg:text-sm">April 09, 2022</p>
                   </div>
@@ -106,41 +105,41 @@
             <span class="font-serif text-5xl italic md:block md:text-7xl"> non tincidunt consectetur </span>
           </h2>
           <p class="mt-8 font-sans text-lg font-normal leading-8 text-opacity-50 text-primary-100">
-            Lorem convallis ligula mi tristique vel iaculis ultrices proin. Habitant dignissim volutpat accumsan egestas arcu vulputate. Nulla diam nisl, mi non luctus ut neque. Sit ac elementum, vivamus imperdiet.
+          Lorem convallis ligula mi tristique vel iaculis ultrices proin. Habitant dignissim volutpat accumsan egestas arcu vulputate. Nulla diam nisl, mi non luctus ut neque. Sit ac elementum, vivamus imperdiet.
           </p>
           <div class="mt-8">
             <a
-              href="#"
-              title=""
-              class="
-              inline-flex
-              items-center
-              justify-center
-              px-5
-              py-2
-              font-sans
-              text-base
-              font-semibold
-              transition-all
-              duration-200
-              bg-transparent
-              border-2
-              rounded-full
-              sm:leading-8
-              text-primary-100
-              border-primary
-              hover:bg-primary-100
-              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200
-              hover:text-black
-              sm:text-lg
-              focus:ring-offset-secondary
-              "
-              role="button"
-              >
-              <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.0416 4.9192C7.37507 4.51928 6.5271 4.99939 6.5271 5.77669L6.5271 18.2232C6.5271 19.0005 7.37507 19.4806 8.0416 19.0807L18.4137 12.8574C19.061 12.469 19.061 11.5308 18.4137 11.1424L8.0416 4.9192Z"></path>
-              </svg>
-              Watch trailer
+                href="#"
+                title=""
+                class="
+                       inline-flex
+                       items-center
+                       justify-center
+                       px-5
+                       py-2
+                       font-sans
+                       text-base
+                       font-semibold
+                       transition-all
+                       duration-200
+                       bg-transparent
+                       border-2
+                       rounded-full
+                       sm:leading-8
+                       text-primary-100
+                       border-primary
+                       hover:bg-primary-100
+                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200
+                       hover:text-black
+                       sm:text-lg
+                       focus:ring-offset-secondary
+                       "
+                role="button"
+                >
+                <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.0416 4.9192C7.37507 4.51928 6.5271 4.99939 6.5271 5.77669L6.5271 18.2232C6.5271 19.0005 7.37507 19.4806 8.0416 19.0807L18.4137 12.8574C19.061 12.469 19.061 11.5308 18.4137 11.1424L8.0416 4.9192Z"></path>
+                </svg>
+                Watch trailer
             </a>
           </div>
         </div>
@@ -200,7 +199,7 @@
   <section class="py-12 bg-primary-100 sm:py-16 lg:py-20">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-4xl text-primary-900 font-sans">Join 🌼 Secret Gardens community</h2>
+        <h2 class="text-4xl text-primary-900 font-sans">Join 🌼 Lyveris</h2>
         <p class="max-w-md mx-auto mt-5 text-base font-normal text-primary-600 font-sans">With lots of unique blocks, you can easily build a page without coding. Build your nexdt landing page.</p>
       </div>
 
@@ -211,39 +210,39 @@
 
         <form action="#" method="POST" class="relative">
           <input
-            type="email"
-            name=""
-            id=""
-            placeholder="Enter your email address"
-            class="block w-full px-5 py-6 text-base font-normal text-black placeholder-primary-600 bg-primary-50 border border-primary-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none"
-            required
-          />
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter your email address"
+              class="block w-full px-5 py-6 text-base font-normal text-black placeholder-primary-600 bg-primary-50 border border-primary-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none"
+              required
+              />
 
           <div class="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
             <button
-              type="submit"
-              class="
-              inline-flex
-              items-center
-              justify-center
-              w-full
-              px-8
-              py-4
-              text-base
-              font-bold
-              text-primary-50
-              transition-all
-              duration-200
-              bg-primary-700
-              border border-transparent
-              sm:w-auto sm:py-3
-              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
-              font-pj
-              hover:bg-opacity-90
-              rounded-xl
-              "
-              >
-              Get started now
+                type="submit"
+                class="
+                       inline-flex
+                       items-center
+                       justify-center
+                       w-full
+                       px-8
+                       py-4
+                       text-base
+                       font-bold
+                       text-primary-50
+                       transition-all
+                       duration-200
+                       bg-primary-700
+                       border border-transparent
+                       sm:w-auto sm:py-3
+                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900
+                       font-pj
+                       hover:bg-opacity-90
+                       rounded-xl
+                       "
+                >
+                Get started now
             </button>
           </div>
         </form>
@@ -253,4 +252,5 @@
     </div>
   </section>
   <!-- Join CTA: End -->
+</div>
 </div>
