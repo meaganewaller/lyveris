@@ -3,7 +3,7 @@ inherit_mode:
     - Exclude
 
 AllCops:
-  NewCops: enable
+  NewCops: disable
   TargetRubyVersion: 3.3
   DisplayCopNames: true
   Exclude:
@@ -17,6 +17,9 @@ AllCops:
     rubocop-rails: true
     rubocop-rspec: true
     rubocop-rspec_rails: false # set to true and add `require: rubocop-rspec` to enable (https://stackoverflow.com/a/74034344)
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
 
 Gemspec/AddRuntimeDependency:
   Enabled: true
@@ -309,13 +312,32 @@ Metrics/CyclomaticComplexity:
   Max: 20
 
 Metrics/MethodLength:
-  Max: 60
+  CountComments: false
+  Max: 20
+  Exclude:
+    - "/spec/**/*"
+
+Metrics/ParameterLists:
+  Exclude:
+    - "test/**/*"
 
 Metrics/BlockLength:
-  Enabled: false
+  CountComments: false
+  Max: 25
+  Exclude:
+    - "Rakefile"
+    - "config/routes.rb"
+    - "config/environments/*"
+    - "**/*.rake"
+    - "test/**/*"
+    - "*.gemspec"
+  AllowedMethods: ["class_methods"]
 
 Metrics/AbcSize:
+  Enabled: true
   Max: 50
+  Exclude:
+    - "spec/**/*"
 
 Metrics/PerceivedComplexity:
   Max: 20

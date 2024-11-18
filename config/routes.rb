@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   # admin panels
   authenticated :user, lambda(&:admin?) do
     # insert sidekiq etc
-    mount Split::Dashboard, at: 'admin/split'
+    # mount Split::Dashboard, at: 'admin/split'
   end
+
+  get "up" => "rails/health#show", as: :rails_health_check
 end

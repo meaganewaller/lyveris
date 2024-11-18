@@ -1,5 +1,6 @@
 class BlogPostsController < ApplicationController
   include ApplicationHelper
+  layout :determine_layout
 
   before_action except: [:index, :new, :show] do
     authenticate_user!
@@ -84,5 +85,9 @@ class BlogPostsController < ApplicationController
     elsif (@user = Guild.find_by(slug: params[:username]))
       @blog_posts = @blog_posts.where(guild_id: @user.id).includes(:user)
     end
+  end
+
+  def determine_layout
+    current_user ? 'dashboard' : 'application'
   end
 end

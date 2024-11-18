@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8" />
+  <%= metamagic site: "#{I18n.t('title')}", title: [:site, :title], separator: " · " %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- extra Tailwind components -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+
+  <!-- App Styles -->
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= render "shared/script_tags" %>
+</head>
