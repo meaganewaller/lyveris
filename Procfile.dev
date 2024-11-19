@@ -1,4 +1,5 @@
 web: bin/rails server -b 0.0.0.0
+active_admin: bin/rails active_admin:watch
 redis: redis-server --port 6379
 worker: bundle exec rake delayed:work
 css: bin/rails tailwindcss:watch[always]

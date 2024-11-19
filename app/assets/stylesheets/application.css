@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: "Cobbler";
+  src: url("Cobbler Regular.otf");
+}
+
+html {
+  scroll-padding-top: 150px;
+}
