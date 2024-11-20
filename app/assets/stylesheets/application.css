@@ -22,3 +22,87 @@
 html {
   scroll-padding-top: 150px;
 }
+
+.hero h1 {
+  font-family: "Indie Flower", cursive;
+}
+
+.glitter-corner {
+  position: absolute;
+  transform: scale(0.75);
+  top: -250px;
+  left: -225px;
+  height: 1000px;
+  z-index: 2;
+}
+
+.butterfly-daisy {
+  position: absolute;
+  transform: scale(0.8);
+  top: 225px;
+  height: 350px;
+  left: -20px;
+  z-index: 3;
+}
+
+.stars-trio {
+  position: absolute;
+  transform: scale(1.25);
+  top: -20px;
+  height: 250px;
+  left: 80px;
+  z-index: 3;
+}
+
+.alltoowell-doodle {
+  position: absolute;
+  transform: scale(1.2);
+  top: 20px;
+  height: 300px;
+  left: 220px;
+  z-index: 2;
+}
+
+.sequins {
+  position: absolute;
+  transform: scale(2.5);
+  top: 200px;
+  height: 200px;
+  right: 220px;
+  z-index: 3;
+}
+
+.hearthands {
+  position: absolute;
+  top: 200px;
+  height: 250px;
+  right: 80px;
+  z-index: 3;
+  transform: scale(3);
+}
+
+.timepiece {
+  position: absolute;
+  top: 290px;
+  height: 250px;
+  right: 200px;
+  z-index: 3;
+  transform: scale(0.5);
+}
+
+.stars-sheetmusic {
+  position: absolute;
+  top: 280px;
+  height: 250px;
+  right: -80px;
+  z-index: 3;
+}
+
+.written-lyrics {
+  position: absolute;
+  top: 50px;
+  height: 250px;
+  right: 50px;
+  z-index: 3;
+  transform: scale(1.5);
+}

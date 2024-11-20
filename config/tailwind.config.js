@@ -217,6 +217,10 @@ module.exports = {
           "5%, 80%": { opacity: "1" },
         },
       },
+      backgroundImage: {
+        "hero-pattern": "url('hero-pattern.svg')",
+        hero: "url('hero.png')",
+      },
     },
   },
   plugins: [
