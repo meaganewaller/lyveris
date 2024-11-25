@@ -21,7 +21,7 @@ gem 'pg'
 gem 'postmark-rails'
 gem "packwerk", "~> 3.2"
 gem 'pretender'
-gem 'puma', '~> 6.4'
+gem 'puma', '~> 6.5'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rails', '8.0.0'
 gem 'redis'
